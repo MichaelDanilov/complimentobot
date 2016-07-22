@@ -1,0 +1,27 @@
+{
+  "name": "complimentobot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Michael Danilov",
+    "email": "michael@danilov.me",
+    "url": "https://danilov.me/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lodash.samplesize": "^4.0.4",
+    "node-telegram-bot-api": "^0.23.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichaelDanilov/complimentobot"
+  },
+  "bugs": {
+    "url": "https://github.com/MichaelDanilov/complimentobot/issues"
+  },
+  "homepage": "https://github.com/MichaelDanilov/complimentobot"
+}
