@@ -24,6 +24,10 @@ bot.onText(/\/last( ([0-9]+))*/, (msg, match) => {
   bot.sendMessage(msg.from.id, concatMessage(getLast(match[1])));
 });
 
+bot.on('inline_query', msg => {
+	bot.answerInlineQuery(msg.id, toInlineQuery(getRandom(5)));
+})
+
 function getRandom(n = 1) {
 	return sampleSize(compliments, n);
 }
@@ -38,4 +42,23 @@ function concatMessage(list = []) {
 		message = `${message}\n${item.text}`;
 	});
 	return message;
+}
+
+function toInlineQuery(list = []) {
+	const articles = [];
+	list.map((item, index) => {
+		articles.push({
+			type: 'article',
+			id: `${Math.random()}`,
+			title: item.text,
+			cache_time: 60,
+			input_message_content: {
+				message_text: item.text
+			},
+			thumb_url: `https://s.dnlv.co/bots/complimentobot/flower${(index + 1)}.jpg`,
+			thumb_width: 200,
+			thumb_height: 200,
+		});
+	});
+	return articles;
 }
