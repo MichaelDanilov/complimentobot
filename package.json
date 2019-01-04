@@ -1,6 +1,6 @@
 {
   "name": "complimentobot",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "lodash.samplesize": "^4.0.4",
-    "node-telegram-bot-api": "^0.23.3"
+    "lodash.samplesize": "4.2.0",
+    "node-telegram-bot-api": "0.30.0"
   },
   "repository": {
     "type": "git",
